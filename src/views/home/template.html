@@ -1,0 +1,114 @@
+<div class="col s12">
+    <ul class="z-depth-2 collapsible white" data-collapsible="expandable">
+        <li v-repeat="services">
+            <div class="collapsible-header">
+                <div class="collection">
+                    <div class="collection-item avatar">
+
+                        <i v-if='loading' class="material-icons circle fa fa-refresh fa-spin"></i>
+
+                        <div v-if='!loading && checkIfAllHostsAreOnline(nodes)'>
+                            <i class="fa fa-thumbs-up circle green"></i>
+                            <span class="title">{{$key}}</span>
+                            <p v-if='loading'>
+                                {{ $t("service.refreshing") }}
+                            </p>
+                            <p v-if='!loading'>
+                                {{ $t("service.ok") }}
+                            </p>
+                        </div>
+
+                        <div v-if='!loading && checkIfSomeHostsAreOnline(nodes)'>
+                            <i class="fa fa-exclamation-triangle circle orange"></i>
+                            <span class="title">{{$key}}</span>
+                            <p v-if='loading'>
+                                {{ $t("service.refreshing") }}
+                            </p>
+                            <p v-if='!loading'>
+                                {{ $t("service.degraded") }}
+                            </p>
+                        </div>
+
+                        <div v-if='!loading && checkIfAllHostsAreOffline(nodes)'>
+                            <i  class="fa fa-thumbs-down circle red"></i>
+                            <span class="title">{{$key}}</span>
+                            <p v-if='loading'>
+                                {{ $t("service.refreshing") }}
+                            </p>
+                            <p v-if='!loading'>
+                                {{ $t("service.offline") }}
+                            </p>
+                        </div>
+
+                        <br>
+                        <p>
+                            {{ $t("hosts.online") }}{{nodes | countOnlineHosts}}/{{nodes | countAllHosts}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="collapsible-body white">
+                <table class="centered hoverable">
+                    <thead>
+                        <tr><th>{{ $t("hosts.host") }}</td><th>{{ $t("hosts.status") }}</th><th>{{ $t("hosts.location") }}</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr v-repeat="nodes">
+                            <td>
+                                <span>{{name}}</span>
+                            </td>
+                            <td>
+                                <div v-if="online">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="green-text fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <span>
+                                        {{ $t("host.online") }}
+                                    </span>
+                                </div>
+                                <div v-if="degraded">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="orange-text fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-exclamation-triangle fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <span>
+                                        {{ $t("host.degraded") }}
+                                    </span>
+                                </div>
+                                <div v-if="triggers">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="blue-text fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <span>
+                                        {{info}}
+                                    </span>
+                                    <span v-repeat='triggers'>
+                                        <span v-repeat='acknowledges'>
+                                            {{message}}
+                                        </span>
+                                    </span>
+                                </div>
+                                <div v-if="offline">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="red-text fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-close fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <span>
+                                        {{ $t("host.offlineFrom") }}{{offline | formatDate}}
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <img v-attr="src: 'http://flag-cdn.com/flags/32/'+country+'.png'" style="width:32px;height:32px;vertical-align:middle">
+                                <span>{{city}}, {{dc}}</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </li>
+    </ul>
+    <h5 class="white-text thin-text">{{ $t("general.refresh") }}</h5>
+</div>

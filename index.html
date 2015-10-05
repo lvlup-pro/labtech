@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}}</title>
+        <link href="/assets/materialize/css/materialize.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    </head>
+    <body class="light-green">
+        <header>
+            <nav class="light-green" role="navigation">
+                <div class="nav-wrapper container">
+                    <a id="logo-container" class="brand-logo thin-text">{{title}}</a>
+                    <ul id="slide-out" class="side-nav fixed">
+                        <li style="padding-bottom:20px"><a href="#"><img style="width:100%;padding-top:15px" v-attr="src:config.logoUrl"></a></li>
+                        <sidebar-menu></sidebar-menu>
+                    </ul>
+                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                </div>
+            </nav>
+        </header>
+        <main class="light-green">
+            <div class="container">
+                <div class="row">
+                    <router-view></router-view>
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer light-green">
+            <div class="footer-copyright" style="">
+                <div class="container">
+                    {{config.copyright}} Powered by <a class="white-text" target="_blank" href="https://github.com/lvlup-pro/labtech">Labtech status page</a>
+                </div>
+            </div>
+        </footer>
+        <script src="/build/build.js"></script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+{
+    "Control panel": {
+        "nodes": [
+            {
+                "name": "cp.example.com",
+                "country": "pl",
+                "city": "Olsztyn",
+                "dc": "SDC",
+                "online": true
+            }
+        ]
+    },
+    "VPS": {
+        "nodes": [
+            {
+                "name": "n1.example.com",
+                "country": "pl",
+                "city": "Olsztyn",
+                "dc": "SDC",
+                "online": true
+            },
+            {
+                "name": "n2.example.com",
+                "country": "de",
+                "city": "Nuremberg",
+                "dc": "SDC",
+                "online": true
+            },
+            {
+                "name": "n3.example.com",
+                "country": "fr",
+                "city": "Roubaix",
+                "dc": "OVH RBX-3",
+                "online": true
+            },
+            {
+                "name": "n4.example.com",
+                "country": "fr",
+                "city": "Roubaix",
+                "dc": "OVH RBX-2",
+                "online": true
+            },
+            {
+                "name": "n5.example.com",
+                "country": "us",
+                "city": "Boardman",
+                "dc": "AWS EC2",
+                "offline": 1444072056000
+            }
+        ]
+    },
+    "WWW": {
+        "nodes": [
+            {
+                "name": "w1.example.com",
+                "country": "fr",
+                "city": "Roubaix",
+                "dc": "OVH RBX-1",
+                "offline": 1444072387000
+            }
+        ]
+    }
+}

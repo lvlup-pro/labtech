@@ -1,0 +1,43 @@
+.thin-text
+{
+    font-weight:200;
+}
+footer 
+{
+    padding-top: 0px!important;
+}
+footer-copyright
+{
+    background-color:rgba(51, 51, 51, 0)!important;
+}
+header, main, footer
+{
+    padding-left: 240px;
+}
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+.footer-copyright
+{
+    background-color:rgba(51, 51, 51, 0)!important;
+}
+.word_wrap
+{
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+/*http://stackoverflow.com/a/4407335/1351857*/
+.collection
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -1,0 +1,48 @@
+{
+  "name": "lvlup-labtech",
+  "version": "0.10.0",
+  "description": "lvlup.pro services status page",
+  "main": "src/main.js",
+  "dependencies": {
+    "brace": "~0.5.1",
+    "file-loader": "^0.8.4",
+    "font-awesome": "^4.3.0",
+    "font-awesome-webpack": "0.0.3",
+    "hammerjs": "^2.0.4",
+    "in-browser-language": "^1.0.2",
+    "insert-css": "^0.2.0",
+    "jquery": "^2.1.4",
+    "jquery-hammerjs": "^2.0.0",
+    "jsesc": "~0.5.0",
+    "materialize-css": "git+https://github.com/Dogfalo/materialize.git#76daf9590a160235bd2005fc3e3f27866245795c",
+    "page": "^1.6.3",
+    "route-recognizer": "^0.1.5",
+    "url-loader": "^0.5.6",
+    "vue": "^0.12.10",
+    "vue-i18n": "^2.2.0",
+    "vue-resource": "git+https://github.com/vuejs/vue-resource.git#215f50556c151247b8423e2a688ea2505acbc00d",
+    "vue-router": "git+https://github.com/vuejs/vue-router.git#b9f5a9b06838a6d6d038d09e7fdfd877b9b72dae"
+  },
+  "devDependencies": {
+    "css-loader": "^0.12.1",
+    "html-loader": "^0.3.0",
+    "node-libs-browser": "^0.5.0",
+    "style-loader": "^0.12.2",
+    "stylus-loader": "^1.1.1",
+    "uglify-loader": "^1.2.0",
+    "webpack": "^1.9.7",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "scripts": {
+    "dev": "sed -i 's/context.minimize = true;/context.minimize = false;/' node_modules/webpack/lib/optimize/UglifyJsPlugin.js && webpack-dev-server --host 0.0.0.0 --port 9000 --content-base . --hot --progress --watch --colors",
+    "build": "webpack --progress --optimize-minimize --optimize-occurence-order"
+  },
+  "keywords": [
+    "lvlup.pro",
+    "LVL UP",
+    "status",
+    "health"
+  ],
+  "author": "Michał Frąckiewicz",
+  "license": "MIT"
+}
