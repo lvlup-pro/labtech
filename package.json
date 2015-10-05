@@ -1,6 +1,6 @@
 {
   "name": "lvlup-labtech",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "lvlup.pro services status page",
   "main": "src/main.js",
   "dependencies": {

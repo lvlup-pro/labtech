@@ -6,6 +6,11 @@ End user friendly status page using .json files generated from zabbix powered [D
 
 [http://lvlup-pro.github.io/labtech](http://lvlup-pro.github.io/labtech)
 
+## Why?
+
+SaaS status pages are expensive for startups and private needs.
+Labtech gives you more elastic approach.
+
 ## How to run dev
 
 ```bash
