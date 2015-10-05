@@ -3,7 +3,7 @@ module.exports = {
     entry: "./src/main.js",
     output: {
         path: "./build",
-        publicPath: "/build/",
+        publicPath: "build/",
         filename: "build.js",
 	chunkFilename: "[id].build.js?v=[hash]"
     },

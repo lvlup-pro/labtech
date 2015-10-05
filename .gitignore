@@ -4,3 +4,4 @@ build
 output
 config.json
 hosts.json
+/npm-debug.log
