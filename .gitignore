@@ -4,4 +4,6 @@ build
 output
 config.json
 hosts.json
-/npm-debug.log
+npm-debug.log
+demo
+deploy.sh
