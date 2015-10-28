@@ -1,0 +1,1 @@
+webpackJsonp([3],{35:function(e,t){e.exports='<div class="col s12"><h3 class="white-text thin-text">404</h3></div>'},117:function(e,t,n){(function(t){e.exports={template:n(35),replace:!0,ready:function(){this.$root.$set("title","404"),t(".button-collapse").sideNav("hide")}}}).call(t,n(4))}});

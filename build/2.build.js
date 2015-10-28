@@ -1,0 +1,1 @@
+webpackJsonp([2],{37:function(e,t){e.exports='<li><a class="waves-effect waves-green" href="#/">{{$t("general.header")}}</a></li>'},119:function(e,t,n){(function(t){setTimeout(function(){t(".collapsible").collapsible()},1),t(".button-collapse").sideNav(),e.exports={template:n(37),replace:!0,data:function(){return{menu:this.$root.menu}}}}).call(t,n(4))}});
