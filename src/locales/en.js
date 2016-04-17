@@ -1,7 +1,7 @@
 window.locale.en = {
     general: {
         header: 'Service status',
-        refresh: 'List is refreshed each 10 seconds'
+        refresh: 'List is refreshed each <seconds> seconds'
     },
     service: {
         ok: 'Service is working normally',
