@@ -43,8 +43,6 @@ To your favourite static hosting. Custom .sh script could be helpful
 - Uptime chart
 - RSS
 - Theme color change in config
-- Refresh interval in config
-- Header text in config
 - More locales (i18n)
 
 ## License
