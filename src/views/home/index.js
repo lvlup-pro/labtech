@@ -14,14 +14,23 @@ module.exports = {
                             "nodes": [
                             ]
                         }
-                    }
+                    },
+            refreshInfo: this.$t('general.refresh').replace("<seconds>", "...")
         }
     },
     ready: function () {
-        this.$root.$set('title', this.$t("general.header"));
+        if (window.config == undefined)
+            config = [];
+        if (!config.header)
+            config.header = this.$t('general.header');
+        if (!config.interval)
+            config.interval = 10000;
+        
+        this.refreshInfo = this.$t('general.refresh').replace('<seconds>', config.interval / 1000);
+        this.$root.$set('title', config.header);
         jQuery('.button-collapse').sideNav('hide');
         this.getServers();
-        window.interval = setInterval(this.getServers, 10000);
+        window.interval = setInterval(this.getServers, config.interval);
     },
     filters: {
         //http://stackoverflow.com/questions/3177836/how-to-format-time-since-xxx-e-g-4-minutes-ago-similar-to-stack-exchange-site

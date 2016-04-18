@@ -1,7 +1,7 @@
 window.locale.pl = {
     general: {
         header: 'Status usług',
-        refresh: 'Odświeżanie listy następuje co 10 sekund',
+        refresh: 'Odświeżanie listy następuje co <seconds> sekund',
     },
     service: {
         ok: 'Usługa działa poprawnie',

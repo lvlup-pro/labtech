@@ -48,7 +48,7 @@ var root = Vue.extend({
             logged: false,
             router: router,
             email: '',
-            title: 'Panel',
+            title: '',
             menu: [
             ]
         }
@@ -64,6 +64,8 @@ var root = Vue.extend({
         getConfig: function () {
             this.$http.get('config.json', function (data) {
                 this.config = data;
+                window.config = data;
+                
             });
         }
     },
