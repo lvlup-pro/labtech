@@ -19,7 +19,12 @@ module.exports = {
         }
     },
     ready: function () {
-        while (window.config == undefined) {}
+        if (window.config == undefined)
+            config = [];
+        if (!config.header)
+            config.header = this.$t('general.header');
+        if (!config.interval)
+            config.interval = 10000;
         
         this.refreshInfo = this.$t('general.refresh').replace('<seconds>', config.interval / 1000);
         this.$root.$set('title', config.header);
