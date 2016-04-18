@@ -65,6 +65,16 @@ var root = Vue.extend({
             this.$http.get('config.json', function (data) {
                 this.config = data;
                 window.config = data;
+                
+                //default values
+                if (!config.logoUrl)
+                    config.logoUrl = "https://lvlup.pro/assets/img/logo.png";
+                if (!config.copyright)
+                    config.copyright = "©Copyright 2015 LVL UP";
+                if (!config.header)
+                    config.header = this.$t('general.header');
+                if (!config.interval)
+                    config.interval = 10000;
             });
         }
     },

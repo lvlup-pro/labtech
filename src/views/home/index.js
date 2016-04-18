@@ -22,7 +22,7 @@ module.exports = {
         while (window.config == undefined) {}
         
         this.refreshInfo = this.$t('general.refresh').replace('<seconds>', config.interval / 1000);
-        this.$root.$set('title', config.header || this.$t('general.header'));
+        this.$root.$set('title', config.header);
         jQuery('.button-collapse').sideNav('hide');
         this.getServers();
         window.interval = setInterval(this.getServers, config.interval);
