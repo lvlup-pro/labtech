@@ -1,4 +1,6 @@
 {
     "logoUrl": "https://lvlup.pro/assets/img/logo.png",
-    "copyright": "©Copyright 2015 LVL UP"
+    "copyright": "©Copyright 2015 LVL UP",
+    "header": "",
+    "interval": 10000
 }
