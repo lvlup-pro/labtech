@@ -2,8 +2,14 @@ nav {
     box-shadow: none;
 }
 
-nav, footer.page-footer {
+td {
+    border-radius: 0;
+}
+
+nav, nav .brand-logo, .side-nav.fixed a, .collapsible-header, .collection .collection-item,
+footer.page-footer, footer.page-footer .footer-copyright, footer.page-footer .footer-copyright a {
     background: transparent;
+    color: inherit;
 }
 
 #logo {
