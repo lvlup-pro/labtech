@@ -1,0 +1,12 @@
+nav {
+    box-shadow: none;
+}
+
+#logo {
+    padding-bottom: 20px;
+}
+
+#logo img {
+    width: 100%;
+    padding-top: 15px;
+}
