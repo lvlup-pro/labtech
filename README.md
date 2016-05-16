@@ -42,7 +42,6 @@ To your favourite static hosting. Custom .sh script could be helpful
 - News and info about maintenance
 - Uptime chart
 - RSS
-- Theme color change in config
 - More locales (i18n)
 
 ## License
