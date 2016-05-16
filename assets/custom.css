@@ -2,6 +2,10 @@ nav {
     box-shadow: none;
 }
 
+nav, footer.page-footer {
+    background: transparent;
+}
+
 #logo {
     padding-bottom: 20px;
 }
