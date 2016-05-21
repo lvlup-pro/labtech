@@ -1,0 +1,30 @@
+nav {
+    box-shadow: none;
+}
+
+td {
+    border-radius: 0;
+}
+
+nav, nav .brand-logo, .side-nav.fixed a, .collapsible-header, .collection .collection-item,
+footer.page-footer, footer.page-footer .footer-copyright, footer.page-footer .footer-copyright a {
+    background: transparent;
+    color: inherit;
+}
+
+#logo {
+    padding-bottom: 20px;
+}
+
+#logo img {
+    width: 100%;
+    padding-top: 15px;
+}
+
+#slide-out {
+    left: 0;
+}
+
+#menu-button {
+    font-size: 28px;
+}

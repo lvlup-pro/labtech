@@ -2,5 +2,17 @@
     "logoUrl": "https://lvlup.pro/assets/img/logo.png",
     "copyright": "©Copyright 2015 LVL UP",
     "header": "",
-    "interval": 10000
+    "interval": 10000,
+    "style": {
+        "background": {
+            "color": "#8bc34a",
+            "text": "white"
+        },
+        "foreground": {
+            "color": "white",
+            "text": "black",
+            "hover": "#eee",
+            "border": "#ccc"
+        }
+    }
 }

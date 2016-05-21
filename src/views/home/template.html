@@ -1,5 +1,5 @@
 <div class="col s12">
-    <ul class="z-depth-2 collapsible white" data-collapsible="expandable">
+    <ul class="foreground z-depth-2 collapsible" data-collapsible="expandable">
         <li v-repeat="services">
             <div class="collapsible-header">
                 <div class="collection">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="collapsible-body white">
+            <div class="collapsible-body">
                 <table class="centered hoverable">
                     <thead>
                         <tr><th>{{ $t("hosts.host") }}</td><th>{{ $t("hosts.status") }}</th><th>{{ $t("hosts.location") }}</th></tr>
@@ -110,5 +110,5 @@
             </div>
         </li>
     </ul>
-    <h5 class="white-text thin-text">{{ refreshInfo }}</h5>
+    <h5 class="thin-text">{{ refreshInfo }}</h5>
 </div>

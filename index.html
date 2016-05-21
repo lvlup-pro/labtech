@@ -2,35 +2,59 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
         <title>{{title}}</title>
+        
         <link href="assets/materialize/css/materialize.min.css" rel="stylesheet">
+        <link href="assets/custom.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/1.0.0/css/flag-icon.min.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        
+        <style>
+            body {
+                background: {{config.style.background.color}};
+                color: {{config.style.background.text}};
+            }
+            
+            .foreground, .side-nav {
+                background: {{config.style.foreground.color}};
+                color: {{config.style.foreground.text}};
+            }
+            
+            .foreground, .foreground .collapsible-header, .foreground .collapsible-body, .foreground thead {
+                border-color: {{config.style.foreground.border}};
+            }
+            
+            .foreground table.hoverable > tbody > tr:hover, .side-nav li:hover {
+                background: {{config.style.foreground.hover}};
+            }
+            
+        </style>
     </head>
-    <body class="light-green">
+    <body>
         <header>
-            <nav class="light-green" role="navigation">
+            <nav role="navigation">
                 <div class="nav-wrapper container">
                     <a id="logo-container" class="brand-logo thin-text">{{title}}</a>
                     <ul id="slide-out" class="side-nav fixed">
-                        <li style="padding-bottom:20px"><a href="#"><img style="width:100%;padding-top:15px" v-attr="src:config.logoUrl"></a></li>
+                        <li id="logo"><a href="/"><img v-attr="src:config.logoUrl"></a></li>
                         <sidebar-menu></sidebar-menu>
                     </ul>
-                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                    <a id="menu-button" href="#" data-activates="slide-out" class="button-collapse">&#9776;</a>
                 </div>
             </nav>
         </header>
-        <main class="light-green">
+        <main>
             <div class="container">
                 <div class="row">
                     <router-view></router-view>
                 </div>
             </div>
         </main>
-        <footer class="page-footer light-green">
+        <footer class="page-footer">
             <div class="footer-copyright" style="">
                 <div class="container">
-                    {{config.copyright}} Powered by <a class="white-text" target="_blank" href="https://github.com/lvlup-pro/labtech">Labtech status page</a>
+                    {{config.copyright}} Powered by <a target="_blank" href="https://github.com/lvlup-pro/labtech">Labtech status page</a>
                 </div>
             </div>
         </footer>
